@@ -1,0 +1,62 @@
+name: "📚 新增副业品类 / New Category"
+description: 建议在 knowledge/categories.md 中新增一个副业方向（或更新已有方向的数据）。
+title: "[品类库] 新增："
+labels: ["knowledge-base", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        品类库是这个 skill 的冷知识源。好的新品类建议：**具体、有真实案例、能标注数据来源**。
+
+  - type: input
+    id: category_name
+    attributes:
+      label: 品类/方向名称
+      placeholder: "如：AI 表情包 + 小红书引流"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: big_category
+    attributes:
+      label: 归属大类
+      options:
+        - 一、内容创作类
+        - 二、技能服务类
+        - 三、电商/交易类
+        - 四、线下/实体类
+        - 五、被动收入类
+        - 新大类（请在备注中说明）
+    validations:
+      required: true
+
+  - type: textarea
+    id: metadata
+    attributes:
+      label: 元数据
+      description: 按 categories.md 的表格格式填写。
+      value: |
+        - 所需技能：
+        - 启动成本：
+        - 时间要求：
+        - 收入范围（月）：
+        - 适合人群：
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 数据来源 / 真实案例
+      description: 必填。至少 1 个来源链接或可核查的案例，否则不会被采纳。
+      placeholder: "如：知乎 @xxx 2025-08 文章、电鸭社区 xxx 贴、Gumroad 博文 xxx"
+    validations:
+      required: true
+
+  - type: input
+    id: last_verified
+    attributes:
+      label: 最后验证日期
+      placeholder: "YYYY-MM-DD（你实际核对这些数据的日期）"
+    validations:
+      required: true

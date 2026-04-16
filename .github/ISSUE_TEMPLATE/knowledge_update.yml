@@ -1,0 +1,37 @@
+name: "🔄 知识/数据过期 / Knowledge Outdated"
+description: 品类库或 prompt 中引用的平台规则、收入数据、工具链已过期。
+title: "[过期] "
+labels: ["knowledge-base", "stale-data"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: 出处
+      description: 文件路径 + 具体段落或行号。
+      placeholder: "knowledge/categories.md 表 1.1 / prompts/discovery.md 搜索模板"
+    validations:
+      required: true
+
+  - type: textarea
+    id: stale
+    attributes:
+      label: 过期的内容
+      description: 粘贴当前仓库里的原文。
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_truth
+    attributes:
+      label: 最新情况
+      description: 现在实际是怎样？附来源链接。
+    validations:
+      required: true
+
+  - type: input
+    id: detected_on
+    attributes:
+      label: 发现日期
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
