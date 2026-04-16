@@ -88,6 +88,9 @@ git clone https://github.com/xz1220/side-hustle-skill ~/.openclaw/workspace/skil
 
 ## 效果示例
 
+> 👉 真实跑过的完整样本：[`examples/ui_designer_figma/`](examples/ui_designer_figma/)（UI 设计师 / 10h 周末 / 0 预算，Top pick 26/30）。<br>
+> 👉 想看你自己这份？[开一个「帮我跑一遍」issue](https://github.com/xz1220/side-hustle-skill/issues/new?template=run_it_for_me.yml) 我们给你跑。
+
 ### 画像阶段
 
 ```
@@ -162,6 +165,7 @@ side-hustle-skill/
 │   └── kickstart.md      #   冷启动 checklist 生成
 ├── knowledge/            # 知识库
 │   └── categories.md     #   副业品类库与元数据
+├── examples/             # 公开的真实跑过的样本（README 链接）
 ├── results/              # 用户的推荐结果存档（gitignored）
 ├── INSTALL.md            # 详细安装说明
 ├── README_EN.md          # English documentation

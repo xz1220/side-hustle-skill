@@ -1,0 +1,83 @@
+name: "🚀 帮我跑一遍 / Run it for me"
+description: 不想装 Claude Code？填 5 个问题，我们用 /side-hustle 帮你跑并贴出结果。
+title: "[帮我跑] "
+labels: ["run-request", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        👋 填完下面 5 个问题，我们会用 `/side-hustle` 跑一遍，把推荐报告贴回这个 issue。
+        脱敏后的结果（经你同意）会加入 [`examples/`](../blob/main/examples/) 供后来人参考。
+
+        如果你已经装了 Claude Code，直接用更快更私密：见 [INSTALL.md](../blob/main/INSTALL.md)。
+
+        ---
+
+        👋 Fill out the 5 prompts and we'll run `/side-hustle` for you, posting the report back here.
+        With your consent, the anonymized result is added to [`examples/`](../blob/main/examples/) for future visitors.
+
+        Already have Claude Code? Running locally is faster and more private — see [INSTALL.md](../blob/main/INSTALL.md).
+
+  - type: input
+    id: role
+    attributes:
+      label: 1. 职业 / Role
+      description: 职位 + 行业 + 工作年限
+      placeholder: "UI 设计师 3 年 / UI designer, 3 yrs"
+    validations:
+      required: true
+
+  - type: textarea
+    id: skills
+    attributes:
+      label: 2. 核心技能 / Skills
+      description: 不限于工作技能，爱好特长都算 / Include hobbies and life skills
+      placeholder: |
+        - Figma 熟练
+        - 插画板绘
+        - 会写简短设计文档
+    validations:
+      required: true
+
+  - type: input
+    id: time
+    attributes:
+      label: 3. 可用时间 / Time budget
+      description: 每周多少小时？什么时段？ / Hours per week and when?
+      placeholder: "10 小时/周（周末集中）/ 10h/wk, weekends"
+    validations:
+      required: true
+
+  - type: input
+    id: budget
+    attributes:
+      label: 4. 启动预算 / Startup budget
+      description: 0 完全没问题 / $0 is totally fine
+      placeholder: "0 元 / $0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: exclusions
+    attributes:
+      label: 5. 排除项 / Exclusions
+      description: 绝对不想做的事 / Things you absolutely don't want to do
+      placeholder: |
+        - 不直播、不露脸
+        - 不做销售类
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充信息（可选）/ Extra context (optional)
+      description: 已有资源、偏好、约束等 / Existing assets, preferences, constraints
+
+  - type: checkboxes
+    id: publish
+    attributes:
+      label: 公开到 examples/？/ Publish as an example?
+      description: 勾选后，脱敏版推荐报告会加入 `examples/` 帮助其他人参考。不勾也会帮你跑，只是不公开。
+      options:
+        - label: 同意把脱敏后的推荐报告加入公开示例 / I agree to publish the anonymized result

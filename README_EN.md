@@ -88,6 +88,9 @@ Answer a few questions and the AI takes it from there.
 
 ## Example Output
 
+> 👉 Real end-to-end run: [`examples/ui_designer_figma/`](examples/ui_designer_figma/) (UI designer / 10h weekend / $0, top pick scored 26/30).<br>
+> 👉 Want one for your situation? [Open a "Run it for me" issue](https://github.com/xz1220/side-hustle-skill/issues/new?template=run_it_for_me.yml) and we'll run it for you.
+
 ### Profile stage
 
 ```
@@ -162,6 +165,7 @@ side-hustle-skill/
 │   └── kickstart.md      #   Kickstart checklist generation
 ├── knowledge/            # Knowledge base
 │   └── categories.md     #   Side-hustle category library
+├── examples/             # Public real runs (linked from README)
 ├── results/              # Your recommendation archive (gitignored)
 ├── INSTALL.md            # Detailed install notes
 ├── README.md             # 中文文档
