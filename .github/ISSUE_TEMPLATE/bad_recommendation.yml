@@ -1,0 +1,52 @@
+name: "🎯 推荐质量反馈 / Bad Recommendation"
+description: 跑完 /side-hustle 后觉得某个推荐不合理，或遗漏了明显合适的方向。
+title: "[推荐质量] "
+labels: ["recommendation-quality", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请尽量附上 `results/{date}_{slug}/` 下的 `profile.md` 和 `recommendations.md`（隐私敏感部分可以打码），这样我们才能复现。
+
+  - type: textarea
+    id: profile
+    attributes:
+      label: 用户画像（profile.md 内容，可脱敏）
+      description: 至少包含职业、技能、时间、预算、排除项。
+      placeholder: |
+        - 职业：UI 设计师 3 年
+        - 技能：Figma、插画
+        - 时间：10h/周末
+        - 预算：0
+        - 排除：不直播、不露脸
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 问题类型
+      options:
+        - 某个推荐方向不合理（评分虚高/虚低）
+        - 命中了用户排除项（应该被过滤）
+        - 遗漏了明显合适的方向
+        - 方向名称过于笼统（如"做自媒体"）
+        - 两次跑同一画像结果差异过大
+        - 搜索引用了劣质来源
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 具体问题描述
+      description: 问题出在哪个方向？期望的行为是什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: recommendations
+    attributes:
+      label: 原始推荐输出（可选）
+      description: 粘贴 recommendations.md 的相关段落，或整个文件。
+      render: markdown

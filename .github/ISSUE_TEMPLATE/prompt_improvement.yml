@@ -1,0 +1,41 @@
+name: "✍️ Prompt 改进 / Prompt Improvement"
+description: 建议改进 SKILL.md 或 prompts/ 下某个 prompt 文件。
+title: "[prompt] "
+labels: ["prompt", "triage"]
+body:
+  - type: dropdown
+    id: file
+    attributes:
+      label: 涉及文件
+      options:
+        - SKILL.md
+        - prompts/intake.md
+        - prompts/discovery.md
+        - prompts/scorer.md
+        - prompts/kickstart.md
+        - 多个文件 / 跨文件一致性
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: 当前表现
+      description: 现在的 prompt 在什么场景下表现不佳？能复现吗？
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 改动建议
+      description: 你希望改成什么？最好直接给出新的 prompt 文本片段。
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: tradeoff
+    attributes:
+      label: 可能的副作用
+      description: 这个改动会不会影响别的场景？有没有权衡？
