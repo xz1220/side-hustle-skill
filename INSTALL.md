@@ -14,10 +14,10 @@ cd $(git rev-parse --show-toplevel)
 
 # 方式 1：安装到当前项目
 mkdir -p .claude/skills
-git clone https://github.com/perkfly/side-hustle-skill .claude/skills/side-hustle
+git clone https://github.com/xz1220/side-hustle-skill .claude/skills/side-hustle
 
 # 方式 2：安装到全局（所有项目都能用）
-git clone https://github.com/perkfly/side-hustle-skill ~/.claude/skills/side-hustle
+git clone https://github.com/xz1220/side-hustle-skill ~/.claude/skills/side-hustle
 ```
 
 然后在 Claude Code 中说 `/side-hustle` 即可启动。
@@ -29,7 +29,7 @@ git clone https://github.com/perkfly/side-hustle-skill ~/.claude/skills/side-hus
 ### B. OpenClaw
 
 ```bash
-git clone https://github.com/perkfly/side-hustle-skill ~/.openclaw/workspace/skills/side-hustle
+git clone https://github.com/xz1220/side-hustle-skill ~/.openclaw/workspace/skills/side-hustle
 ```
 
 重启 OpenClaw session，说 `/side-hustle` 启动。

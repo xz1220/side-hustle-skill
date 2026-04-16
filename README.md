@@ -46,16 +46,16 @@ AI Agent 并发搜索、交叉评估、量化打分<br>
 ```bash
 # 安装到当前项目（在 git 仓库根目录执行）
 mkdir -p .claude/skills
-git clone https://github.com/perkfly/side-hustle-skill .claude/skills/side-hustle
+git clone https://github.com/xz1220/side-hustle-skill .claude/skills/side-hustle
 
 # 或安装到全局（所有项目都能用）
-git clone https://github.com/perkfly/side-hustle-skill ~/.claude/skills/side-hustle
+git clone https://github.com/xz1220/side-hustle-skill ~/.claude/skills/side-hustle
 ```
 
 ### OpenClaw
 
 ```bash
-git clone https://github.com/perkfly/side-hustle-skill ~/.openclaw/workspace/skills/side-hustle
+git clone https://github.com/xz1220/side-hustle-skill ~/.openclaw/workspace/skills/side-hustle
 ```
 
 重启 session 后输入 `/side-hustle` 即可启动。
